@@ -18,7 +18,8 @@ class Member(models.Model):
              ('Week5', 'Week 5'),
              ('Week6', 'Week 6')
              )
-    leaderforWeek = models.CharField('Leader of Week',max_length=50, choices=WEEKS)
+    leaderforWeek = models.CharField(
+        'Leader of Week', max_length=50, choices=WEEKS)
 
     def __str__(self):
         return self.name
